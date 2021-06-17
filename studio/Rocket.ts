@@ -22,7 +22,7 @@ export class Rocket {
     currentMassKg(): number{
         return this.sumMass(this.astronauts)+ this.sumMass(this.cargoItems);
     }
-    canAdd(item: Payload[] ): boolean {
+    canAdd(item: Payload ): boolean {
         if (this.currentMassKg() + item.massKg <= this.totalCapacityKg) {
             return true
         }
